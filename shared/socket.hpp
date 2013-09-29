@@ -48,8 +48,14 @@ public:
   // Send data over socket
   int Send( const void *data, int size );
 
+  // Send data over specified socket (Server use)
+  int Send( int socketFD, const void *data, int size);
+
   // Receive data over socket
   int Receive( void *data, int size );
+
+  // Receieve data over specified socket (Server use)
+  int Receive( int socketFD, void *data, int size);
   
   // Closes socket
   int Close();

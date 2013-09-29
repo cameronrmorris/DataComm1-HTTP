@@ -101,6 +101,7 @@ int Socket::Connect( char ip[16], const char* port ) {
 
 }
 
+// Binds the port of the socket
 int Socket::BindPort( const char* port ) {
 
   int status;
@@ -169,6 +170,7 @@ int Socket::Listen( int backlog ) {
 
 }
 
+// Accepts any pending connections and returns the FD
 int Socket::Accept( struct sockaddr *remoteAddress ) {
 
   socklen_t addrsize = sizeof( *remoteAddress );
@@ -215,6 +217,43 @@ int Socket::Send( const void *data, int size ) {
   
 }
 
+
+// Sends data over the specified socket of specified size
+int Socket::Send( int socketFD, const void *data, int size ) {
+
+  int total_sent = 0;
+  int bytes_left = size;
+  int n;
+
+  if( getState() != CONNECTED ) {
+
+    std::cerr << "Socket not ready to send!" << std::endl;
+    return -1;
+
+  }
+
+  // Keep sending until all data is transferred
+  while ( total_sent < size ) {
+
+    n = send( socketFD, (char *)data+total_sent, bytes_left, 0 );
+
+    // Something bad
+    if( n == -1 ) {
+      break;
+    }
+
+    total_sent += n;
+    bytes_left -= n;
+
+  }
+
+  if( n == -1 )
+    return -1;
+
+  return total_sent;
+}
+
+// Receives data over the socket in chunks of specified size
 int Socket::Receive( void *data, int size ) {
 
   if( getState() != CONNECTED ) {
@@ -227,6 +266,20 @@ int Socket::Receive( void *data, int size ) {
 
 }
 
+// Receieves data over the specified socket in chunks of specified size
+int Socket::Receive( int socketFD, void *data, int size ) {
+
+  if( getState() != CONNECTED ) {
+
+    std::cerr << "Socket not ready to receive!" << std::endl;
+    return -1;
+
+  }
+  return recv( socketFD, data, size, 0 );
+
+}
+
+// Closes the socket
 int Socket::Close() {
   
   setState(NOTREADY);
@@ -235,6 +288,7 @@ int Socket::Close() {
 
 }
 
+// Closes the socket and destroys
 Socket::~Socket() {
 
   Close();
