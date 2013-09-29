@@ -17,6 +17,7 @@
 enum SocketStates {
 
   NOTREADY,
+  BOUND,
   CONNECTED,
   LISTENING,
 
@@ -30,35 +31,48 @@ public:
   Socket();
 
   // Creates socket on specified port
-  Socket(unsigned short port);
+  Socket( const char* port );
   
-  // Connect to host on port
-  int Connect( char ip[16], unsigned short port );
+  // Bind the socket to a port
+  int BindPort( const char* port );
 
-  // Listens for connections
-  int Listen( int backlog = 5);
+  // Connect to host on port
+  int Connect( char ip[16], const char* port );
+
+  // Listens for connections & sets up socket if necessary
+  int Listen( int backlog = 5 );
 
   // Accept any pending connection
   int Accept( struct sockaddr *remoteAddress );
   
   // Send data over socket
-
   int Send( const void *data, int size );
 
   // Receive data over socket
-
   int Receive( void *data, int size );
-
   
+  // Closes socket
+  int Close();
+
   // Closes socket and cleans up
   ~Socket();
 
-private:
+  // Getters/Setters
+  int getState();
+  void setState( int state );
 
+  int getSocketFD();
+  void setSocketFD( int socket );
+
+
+private:
+  
   // State of the socket
   int state;
 
-  // Descriptor of the socket
+  // Descriptor of the local socket
   int socketFD;
-  
+
+  // Port bound if any
+  unsigned short port;
 };
