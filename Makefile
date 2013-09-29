@@ -64,11 +64,11 @@ all:    $(CLIENT_BIN) $(SERVER_BIN)
 	@echo  Build Successful
 
 # Client
-$(CLIENT_BIN): $(CLIENT_OBJS) $(SHARED_OBJS)
+$(CLIENT_BIN): $(CLIENT_MAIN) $(CLIENT_OBJS) $(SHARED_OBJS)
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(CLIENT_BIN) $(CLIENT_MAIN) $(CLIENT_OBJS) $(SHARED_OBJS) $(LFLAGS) $(LIBS) $(OTHER)
 
 # Server
-$(SERVER_BIN): $(SERVER_OBJS) $(SHARED_OBJS)
+$(SERVER_BIN): $(SERVER_MAIN) $(SERVER_OBJS) $(SHARED_OBJS)
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(SERVER_BIN) $(SERVER_MAIN) $(SERVER_OBJS) $(SHARED_OBJS) $(LFLAGS) $(LIBS) $(OTHER)
 
 # this is a suffix replacement rule for building .o's from .c's
