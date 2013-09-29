@@ -1,10 +1,10 @@
-B/*****************************************************************************/
+/*****************************************************************************/
 /* Programmer: Cameron Morris                                                */
 /*                                                                           */
 /* Program Assignment: HTTP Client/Server                                    */
 /*                                                                           */
 /* File: socket.hpp                                                          */
-/0;115;0c*                                                                           */
+/*                                                                           */
 /* Description: Contains the implementation of the socket class              */
 /*                                                                           */
 /*                                                                           */
@@ -18,6 +18,7 @@ B/*****************************************************************************/
 #include <string.h>
 #include <stdlib.h>
 #include <iostream>
+#include <unistd.h>
 
 // Getters/setters
 void Socket::setState( int state ) {
@@ -90,7 +91,7 @@ int Socket::Connect( char ip[16], const char* port ) {
   }
   // Connect to host
   status = connect( getSocketFD(), result->ai_addr, result->ai_addrlen );
-  
+
   freeaddrinfo( result );
 
   setState(CONNECTED);
@@ -184,7 +185,7 @@ int Socket::Send( const void *data, int size ) {
   int bytes_left = size;
   int n;
 
-  if( getState() != CONNECTED || getState() != LISTENING ) {
+  if( getState() != CONNECTED ) {
 
     std::cerr << "Socket not ready to send!" << std::endl;
     return -1;
@@ -216,7 +217,7 @@ int Socket::Send( const void *data, int size ) {
 
 int Socket::Receive( void *data, int size ) {
 
-  if( getState() != CONNECTED || getState() != LISTENING ) {
+  if( getState() != CONNECTED ) {
 
     std::cerr << "Socket not ready to receive!" << std::endl;
     return -1;
