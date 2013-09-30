@@ -43,7 +43,7 @@ public:
   int Listen( int backlog = 5 );
 
   // Accept any pending connection
-  int Accept( struct sockaddr *remoteAddress );
+  Socket Accept( struct sockaddr_storage *remoteAddress );
   
   // Send data over socket
   int Send( const void *data, int size );
@@ -78,7 +78,4 @@ private:
 
   // Descriptor of the local socket
   int socketFD;
-
-  // Port bound if any
-  unsigned short port;
 };

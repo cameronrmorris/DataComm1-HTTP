@@ -171,11 +171,16 @@ int Socket::Listen( int backlog ) {
 }
 
 // Accepts any pending connections and returns the FD
-int Socket::Accept( struct sockaddr *remoteAddress ) {
+Socket Socket::Accept( struct sockaddr_storage *remoteAddress ) {
 
+  Socket newSocket;
   socklen_t addrsize = sizeof( *remoteAddress );
 
-  return accept( getSocketFD(), remoteAddress, &addrsize);
+  newSocket.setSocketFD(accept( getSocketFD(), (struct sockaddr *)remoteAddress, &addrsize));
+
+  newSocket.setState(CONNECTED);
+
+  return newSocket;
 
 }
 
