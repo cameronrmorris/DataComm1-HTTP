@@ -21,6 +21,7 @@ int main( int argc, char *argv[] ) {
   Socket server;
   Socket client;
   char buffer[1024];
+  int bytes;
   struct sockaddr_storage remoteAddr;
 
   if( argc < 2 ) {
@@ -45,16 +46,17 @@ int main( int argc, char *argv[] ) {
 
       //Child
     case 0:
+      server.Close();
       // Receive the client request
       std::cout << "Received client request" << std::endl;
-      while ( client.Receive( (void *)buffer, sizeof(buffer) ) )
-	std::cout << "Answering client: " << buffer  << std::endl;
-      client.Send( (void *)buffer, sizeof(buffer));
+      while( (bytes = client.Receive( (void *)buffer, sizeof(buffer))) == -1);
+      std::cout << "bytes=" << bytes << " = Answering client: " << buffer  << std::endl;
+      client.Send( (void *)"test", sizeof(4));
       client.Close();
       exit(0);
       break;
     default:
-      
+      client.Close();
       break;
     }
   }
