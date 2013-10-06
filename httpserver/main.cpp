@@ -15,15 +15,20 @@
 #include <iostream>
 #include <unistd.h>
 #include <stdlib.h>
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <errno.h>
+#include <string.h>
+
 
 int main( int argc, char *argv[] ) {
 
   Socket server;
-  Socket client;
+  Socket* client;
   char buffer[1024];
-  int bytes;
   struct sockaddr_storage remoteAddr;
-
+  char ip[INET6_ADDRSTRLEN];
+  
   if( argc < 2 ) {
 
     std::cout << "Usage: http_server <port>" << std::endl;
@@ -32,10 +37,20 @@ int main( int argc, char *argv[] ) {
   }
 
   // Bind socket to specified socket
-  server.BindPort(argv[1]);
+  if( server.BindPort(argv[1]) == -1 ) {
+
+    std::cout << "Failed to bind on port: " << argv[1] << std::endl;
+
+  }
 
   // Set socket to listen mode
-  server.Listen();
+  if( server.Listen() == -1 ) {
+
+    std::cout << "Failed to listen." << std::endl;
+
+  }
+
+  std::cout << "ServerFD: " << server.getSocketFD() << std::endl;
 
   // Begin server loop for requests
   while( 1 ) {
@@ -44,19 +59,26 @@ int main( int argc, char *argv[] ) {
 
     switch( fork() ) {
 
-      //Child
+    //Child
     case 0:
+      
+      inet_ntop(remoteAddr.ss_family,
+		get_in_addr((struct sockaddr *)&remoteAddr),
+		ip, sizeof ip);
+      std::cout << "got connection from " <<  ip << std::endl;
+      
+      // Client doesn't need listener
       server.Close();
+
       // Receive the client request
-      std::cout << "Received client request" << std::endl;
-      while( (bytes = client.Receive( (void *)buffer, sizeof(buffer))) == -1);
-      std::cout << "bytes=" << bytes << " = Answering client: " << buffer  << std::endl;
-      client.Send( (void *)"test", sizeof(4));
-      client.Close();
+      client->Receive( (void *)buffer, sizeof(buffer));
+      client->Send( (void *)buffer, sizeof(buffer));
+      client->Close();
       exit(0);
       break;
     default:
-      client.Close();
+      // Server doesn't need client
+      client->Close();
       break;
     }
   }

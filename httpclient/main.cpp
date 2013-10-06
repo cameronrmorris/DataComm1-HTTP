@@ -37,15 +37,21 @@ int main( int argc, char *argv[] ) {
 
     return -1;
   }
-
+  
   // Perform get request
   if( strcmp( argv[3], "GET" ) == 0 ) {
 
     sprintf( request, "GET /%s HTTP/1.0\r\n\r\n", argv[4] );
-
-    // Send HTTP GET request
-    client.Send( (void *)request, sizeof( request ));
     
+    // Send HTTP GET request
+    if( client.Send( (void *)request, sizeof( request )) == -1) {
+
+      std::cout << "Failed to send GET" << std::endl;
+      client.Close();
+      return -1;
+
+    }
+
     // Read server's response and print
     while( client.Receive( (void*)response, sizeof(response) )) {  
       std::cout << response;

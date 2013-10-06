@@ -43,19 +43,13 @@ public:
   int Listen( int backlog = 5 );
 
   // Accept any pending connection
-  Socket Accept( struct sockaddr_storage *remoteAddress );
+  Socket *Accept( struct sockaddr_storage *remoteAddress );
   
   // Send data over socket
   int Send( const void *data, int size );
 
-  // Send data over specified socket (Server use)
-  int Send( int socketFD, const void *data, int size);
-
   // Receive data over socket
   int Receive( void *data, int size );
-
-  // Receieve data over specified socket (Server use)
-  int Receive( int socketFD, void *data, int size);
   
   // Closes socket
   int Close();
@@ -79,3 +73,5 @@ private:
   // Descriptor of the local socket
   int socketFD;
 };
+
+void *get_in_addr(struct sockaddr *sa);
