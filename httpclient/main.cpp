@@ -44,7 +44,7 @@ int main( int argc, char *argv[] ) {
     sprintf( request, "GET /%s HTTP/1.0\r\n\r\n", argv[4] );
     
     // Send HTTP GET request
-    if( client.Send( (void *)request, sizeof( request )) == -1) {
+    if( client.Send( (void *)request, strlen( request )) == -1) {
 
       std::cout << "Failed to send GET" << std::endl;
       client.Close();
