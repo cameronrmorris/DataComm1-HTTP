@@ -5,7 +5,7 @@
 /*                                                                           */
 /* File: socket.hpp                                                          */
 /*                                                                           */
-/* Description: Contains the class for a tcp socket using unix api           */
+/* Description: Contains the class for a tcp socket using UNIX api           */
 /*                                                                           */
 /*                                                                           */
 /* Last updated: September 28, 2013 1:00 PM                                  */

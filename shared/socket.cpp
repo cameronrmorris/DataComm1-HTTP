@@ -50,7 +50,7 @@ int Socket::getSocketFD() {
 Socket::Socket() {
 
   setState(NOTREADY);
-
+  setSocketFD(-1);
 }
 
 // Creates listening socket
@@ -59,6 +59,7 @@ Socket::Socket( const char* port ) {
   BindPort( port );
  
   setState(LISTENING);
+  setSocketFD(-1);
 
 }
 
@@ -297,8 +298,21 @@ int Socket::Receive( void *data, int size ) {
 int Socket::Close() {
 
   int status;
+
+  // Already closed in the kernel
+  if( getSocketFD() == -1 )
+    return 0;
   
   status = close(getSocketFD());
+
+  if( status == -1 ) {
+
+    std::cerr << "Failed to close socket: " << strerror(errno) << std::endl;
+    exit(-1);
+
+  }
+
+  setSocketFD(-1);
 
   return status;
 }
@@ -311,6 +325,7 @@ Socket::~Socket() {
 
 }
 
+// Interprets if an IP is v4 or v6
 void *get_in_addr(struct sockaddr *sa)
 {
   if (sa->sa_family == AF_INET) {
