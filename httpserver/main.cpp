@@ -21,6 +21,15 @@
 #include <string.h>
 #include <fstream>
 #include <string>
+#include <sys/wait.h>
+#include <signal.h>
+
+void sig_handler(int n) {
+
+  while( waitpid(-1, NULL, WNOHANG) > 0);
+
+}
+
 
 int main( int argc, char *argv[] ) {
 
@@ -30,10 +39,11 @@ int main( int argc, char *argv[] ) {
   struct sockaddr_storage remoteAddr;
   char ip[INET6_ADDRSTRLEN];
   char *tmp;
-  std::ifstream file;
+  std::fstream file;
   std::string path;
   char response[1024];
   int length;
+  struct sigaction sa;
 
   if( argc < 2 ) {
 
@@ -56,6 +66,18 @@ int main( int argc, char *argv[] ) {
 
   }
 
+  // Setup signal handler
+  sa.sa_handler = sig_handler;
+  sigemptyset(&sa.sa_mask);
+  sa.sa_flags = SA_RESTART;
+  if( sigaction(SIGCHLD, &sa, NULL ) == -1 ) {
+
+    perror("sigaction");
+    exit(-1);
+
+  }
+
+  
   std::cout << "Listening on : " << argv[1] << std::endl;
 
   // Begin server loop for requests
@@ -78,7 +100,7 @@ int main( int argc, char *argv[] ) {
       server.Close();
 
       // Receive the client request
-      client->Receive( (void *)buffer, sizeof(buffer));
+      std::cout << client->Receive( (void *)buffer, sizeof(buffer)) << " bytes\n";
 
       // Get the type of the request
       tmp = strtok( buffer, " " );
@@ -92,7 +114,7 @@ int main( int argc, char *argv[] ) {
 	path += tmp;
 	
 	// Open file
-	file.open(path.c_str());
+	file.open(path.c_str(),std::ios::in);
 	
 	// File exists, send the response
 	if( file.is_open() && file.good() ) {
@@ -146,7 +168,30 @@ int main( int argc, char *argv[] ) {
       // Handle PUT request
       else if ( strcmp( tmp, "PUT" ) == 0 ) {
 
+	// Read filename
+	tmp = strtok( NULL, " " );
+	path += ".";
+	path += tmp;
+	while( tmp != NULL ) {
+	  tmp = strtok( NULL, "\r\n\r\n");
+	  std::cout << tmp;
+	}
 
+	memset( buffer, 0, sizeof(buffer));
+	while( client->Receive( (void *)buffer, sizeof(buffer))) {
+	  
+	  std::cout << buffer;
+
+	  memset( buffer, 0, sizeof(buffer));
+	
+
+
+	}
+
+	std::cout << "200 Ok File Created" << std::endl;
+	strcpy(response,"HTTP/1.0 200 Ok File Created\r\n\r\n");
+	memset(buffer, 0, sizeof(buffer));
+	client->Send( (void*)response, strlen(response));
 
 
       }
