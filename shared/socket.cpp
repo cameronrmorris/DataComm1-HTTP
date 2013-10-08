@@ -68,7 +68,7 @@ int Socket::Connect( char ip[16], const char* port ) {
 
   int status;
   int newFD;
-  struct addrinfo hints, *result;
+  struct addrinfo hints, *result, *p;
   
   if( getState() == LISTENING ) {
     
@@ -89,27 +89,38 @@ int Socket::Connect( char ip[16], const char* port ) {
     exit(1);
 
   }
-  // Open socket if not already
+  
+  // Try to connect to all results
+  for( p = result; p != NULL; p = p->ai_next ) {
 
-  if( getState() != BOUND ) {
+    // Open socket if not already
+    if( getState() != BOUND ) {
 
-    newFD = socket( result->ai_family, result->ai_socktype, result->ai_protocol );
+      newFD = socket( p->ai_family, p->ai_socktype, p->ai_protocol );
+      
+      if( newFD == -1 ) {
+	std::cerr << "Failed to create socket: " << strerror(errno) << std::endl;
+	exit(-1);
+      }
+      
+      setSocketFD(newFD);
+    
+    }
+    // Connect to host
+    status = connect( getSocketFD(), p->ai_addr, p->ai_addrlen );  
+    if( status == -1 ) {
 
-    if( newFD == -1 ) {
-      std::cerr << "Failed to create socket: " << strerror(errno) << std::endl;
-      exit(-1);
+      // Fail on last result
+      if( p->ai_next == NULL ) {
+	std::cerr << "Connected failed: " << strerror(errno) << std::endl;
+	exit(-1);
+      }
+      Close();
+
+     	
     }
 
-    setSocketFD(newFD);
-
   }
-  // Connect to host
-  status = connect( getSocketFD(), result->ai_addr, result->ai_addrlen );  
-  if( status == -1 ) {
-    std::cerr << "Connected failed: " << strerror(errno) << std::endl;
-    exit(-1);
-  }
-
   freeaddrinfo( result );
 
   setState(CONNECTED);
@@ -312,6 +323,7 @@ int Socket::Close() {
 
   }
 
+  setState(NOTREADY);
   setSocketFD(-1);
 
   return status;
