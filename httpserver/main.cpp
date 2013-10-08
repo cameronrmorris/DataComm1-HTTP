@@ -40,7 +40,7 @@ int main( int argc, char *argv[] ) {
   char ip[INET6_ADDRSTRLEN];
   char *tmp;
   std::fstream file;
-  std::string path;
+  std::string path, buffertemp;
   char response[1024];
   int length;
   struct sigaction sa;
@@ -102,6 +102,9 @@ int main( int argc, char *argv[] ) {
       // Receive the client request
       std::cout << client->Receive( (void *)buffer, sizeof(buffer)) << " bytes\n";
 
+      // Make a copy of the buffer
+      buffertemp = buffer;
+
       // Get the type of the request
       tmp = strtok( buffer, " " );
       // Handle GET request
@@ -133,11 +136,12 @@ int main( int argc, char *argv[] ) {
 
 	  // Send file
 	  while( length > 0 ) {
-	    // Size of 1k
-	    if( length > 1024 ) {
-	      file.read(buffer,sizeof(buffer));
+
+	    // Size of buffer
+	    if( length > (int) sizeof(buffer) ) {
+	      file.read(buffer, sizeof(buffer));
 	      client->Send( (void *)buffer, sizeof(buffer));
-	      length -= 1024;
+	      length -= sizeof(buffer);
 	    }
 	    // Less than or equal 1k
 	    else {
@@ -146,6 +150,8 @@ int main( int argc, char *argv[] ) {
 	      break;
 	    }   
 	    memset( buffer, 0, sizeof(buffer));
+
+	    // Finished with file
 	    if( file.eof() ) 
 	      break;
 	  }
@@ -163,7 +169,6 @@ int main( int argc, char *argv[] ) {
 
 	}
 
-
       }
       // Handle PUT request
       else if ( strcmp( tmp, "PUT" ) == 0 ) {
@@ -172,27 +177,38 @@ int main( int argc, char *argv[] ) {
 	tmp = strtok( NULL, " " );
 	path += ".";
 	path += tmp;
-	while( tmp != NULL ) {
-	  tmp = strtok( NULL, "\r\n\r\n");
-	  std::cout << tmp;
-	}
+
+	// Sanitize path name
+	path = path.substr(0, path.find("\r\n\r\n"));
+
+	std::cout << "Creating file " << path << std::endl;
+	
+	// Open the file
+	file.open( path.c_str(), std::ios::out );
+
+	// Extract file data from initial receive request
+	buffertemp = buffertemp.substr(buffertemp.find("\r\n\r\n")+4);
+	
+	// Write data to file
+	file.write(buffertemp.c_str(), buffertemp.size()); 
 
 	memset( buffer, 0, sizeof(buffer));
-	while( client->Receive( (void *)buffer, sizeof(buffer))) {
-	  
-	  std::cout << buffer;
-
-	  memset( buffer, 0, sizeof(buffer));
 	
+	// Receive any remaining data
+	while( client->Receive( (void *)buffer, sizeof(buffer)) ) {
 
+	  file.write(buffer,strlen(buffer));
+	  memset( buffer, 0, sizeof(buffer));
 
 	}
 
-	std::cout << "200 Ok File Created" << std::endl;
-	strcpy(response,"HTTP/1.0 200 Ok File Created\r\n\r\n");
-	memset(buffer, 0, sizeof(buffer));
-	client->Send( (void*)response, strlen(response));
+	// Close & write file
+	file.close();
 
+	// Respond to client
+	strcpy(response,"HTTP/1.0 200 Ok File Created\r\n\r\n");
+	client->Send( (void*)response, strlen(response));
+	std::cout << "200 Ok File Created" << std::endl;
 
       }
       // Invalid request

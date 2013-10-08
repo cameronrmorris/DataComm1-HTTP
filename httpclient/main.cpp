@@ -76,6 +76,11 @@ int main( int argc, char *argv[] ) {
       return -1;
     }
 
+    path += "./";
+    path += argv[4];
+
+    std::cout << path << std::endl;
+
     // Open file
     file.open( path.c_str(), std::ios::in );
 
@@ -86,6 +91,10 @@ int main( int argc, char *argv[] ) {
       file.seekg(0, file.end);
       length = file.tellg();
       file.seekg(0, file.beg);
+
+      std::cout << "Content length: " << length << std::endl;
+
+      memset( request, 0, sizeof( request ));
 
       // Send file
       while( length > 0 ) {
@@ -98,21 +107,27 @@ int main( int argc, char *argv[] ) {
 	}
 	// Less than or equal to buffer
 	else {
-	  file.read(request, length);
+
+	  file.read(request, length);	  
 	  client.Send( (void *)request, length);
 	  break;
 	}
 	memset( request, 0, sizeof(request));
+
+	// Finished with file
 	if( file.eof())
 	  break;
       }
     }
-    // Read server's response and print 
-    while( client.Receive( (void*)response, sizeof(response) )) {
-      std::cout << response;
-      memset( response, 0, sizeof(response));
-    }
+    // Close file
+    file.close();
 
+    // Close sending side of socket
+    client.CloseSend();
+
+    // Read server's response and print 
+    client.Receive( (void*)response, sizeof(response) );
+    std::cout << response;
   }
   // Bad option
   else {
