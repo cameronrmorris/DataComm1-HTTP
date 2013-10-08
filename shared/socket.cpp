@@ -329,7 +329,45 @@ int Socket::Close() {
   return status;
 }
 
+int Socket::CloseSend() {
 
+  int status;
+
+  if( getSocketFD() == -1 )
+    return 0;
+
+  status = shutdown( getSocketFD(), 1 );
+
+  if( status == -1 ) {
+    
+    std::cerr << "Failed to close send side of socket: " << 
+      strerror(errno) << std::endl;
+    exit(-1);
+  }
+  
+  return status;
+}
+
+int Socket::CloseReceive() {
+  
+  int status;
+
+  if( getSocketFD() == -1 )
+    return 0;
+  
+  status = shutdown( getSocketFD(), 0 );
+  
+  if( status == -1 ) {
+
+    std::cerr << "Failed to close receive side of socket: " <<
+      strerror(errno) << std::endl;
+    exit(-1);
+  }
+  
+  return status;
+  
+}
+  
 // Closes the socket and destroys
 Socket::~Socket() {
 

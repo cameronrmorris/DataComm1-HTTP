@@ -51,8 +51,14 @@ public:
   // Receive data over socket
   int Receive( void *data, int size );
   
-  // Closes socket
+  // Closes socket completely
   int Close();
+
+  // Closes sending side of socket
+  int CloseSend();
+
+  // Closes receiving side of socket
+  int CloseReceive();
 
   // Closes socket and cleans up
   ~Socket();
