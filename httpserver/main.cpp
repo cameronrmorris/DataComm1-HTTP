@@ -24,17 +24,30 @@
 #include <sys/wait.h>
 #include <signal.h>
 
+
+// Connections for the server
+Socket server;
+Socket* client = NULL;
+
 void sig_handler(int n) {
 
   while( waitpid(-1, NULL, WNOHANG) > 0);
 
 }
 
+void sig_shutdown(int n ) {
+
+  std::cout << std::endl << "Shutting down..." << std::endl;
+  // Close all sockets open
+  server.Close();
+  if( client != NULL ) 
+    client->Close();
+  
+  exit(0);
+}
 
 int main( int argc, char *argv[] ) {
 
-  Socket server;
-  Socket* client;
   char buffer[1024];
   struct sockaddr_storage remoteAddr;
   char ip[INET6_ADDRSTRLEN];
@@ -43,6 +56,8 @@ int main( int argc, char *argv[] ) {
   char response[1024];
   int length, bytes, pos;
   struct sigaction sa;
+  int sigs [] = { SIGHUP, SIGINT, SIGQUIT, SIGBUS,
+                  SIGTERM, SIGSEGV, SIGFPE };
 
   if( argc < 2 ) {
 
@@ -75,7 +90,18 @@ int main( int argc, char *argv[] ) {
     exit(-1);
 
   }
+  sigemptyset(&sa.sa_mask);
 
+  int nsigs = sizeof(sigs) / sizeof(int);
+
+  for ( int i = 0 ; i < nsigs ; i++ ) {
+    sa.sa_handler = sig_shutdown;
+    sa.sa_flags = 0;
+    if(sigaction (sigs[i], &sa, NULL) == -1){
+      perror("can't set signals: ");
+      exit(1);
+    }
+  }
   
   std::cout << "Listening on : " << argv[1] << std::endl;
 
