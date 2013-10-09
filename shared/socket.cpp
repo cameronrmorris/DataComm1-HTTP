@@ -378,9 +378,12 @@ Socket::~Socket() {
 // Interprets if an IP is v4 or v6
 void *get_in_addr(struct sockaddr *sa)
 {
+
+  // IPv4
   if (sa->sa_family == AF_INET) {
     return &(((struct sockaddr_in*)sa)->sin_addr);
   }
 
+  // IPv6
   return &(((struct sockaddr_in6*)sa)->sin6_addr);
 }
