@@ -38,11 +38,10 @@ int main( int argc, char *argv[] ) {
   char buffer[1024];
   struct sockaddr_storage remoteAddr;
   char ip[INET6_ADDRSTRLEN];
-  char *tmp;
   std::fstream file;
-  std::string path, buffertemp;
+  std::string path, buffertemp, tmpstr;
   char response[1024];
-  int length;
+  int length, bytes, pos;
   struct sigaction sa;
 
   if( argc < 2 ) {
@@ -100,21 +99,24 @@ int main( int argc, char *argv[] ) {
       server.Close();
 
       // Receive the client request
-      std::cout << client->Receive( (void *)buffer, sizeof(buffer)) << " bytes\n";
+      bytes = client->Receive( (void *)buffer, sizeof(buffer));
 
       // Make a copy of the buffer
       buffertemp = buffer;
 
       // Get the type of the request
-      tmp = strtok( buffer, " " );
+      pos = buffertemp.find(" ");
+      tmpstr = buffertemp.substr(0,pos);
+      buffertemp = buffertemp.substr(pos+1,std::string::npos);
+
       // Handle GET request
-      if( strcmp( tmp, "GET" ) == 0 ) { 
+      if( tmpstr == "GET" ) { 
 	
 	// Get the name of the file requested
-	tmp = strtok( NULL, " " );
-	
+	pos = buffertemp.find(" ");
+	tmpstr = buffertemp.substr(0,pos);
 	path += ".";
-	path += tmp;
+	path += tmpstr;
 	
 	// Open file
 	file.open(path.c_str(),std::ios::in);
@@ -171,12 +173,13 @@ int main( int argc, char *argv[] ) {
 
       }
       // Handle PUT request
-      else if ( strcmp( tmp, "PUT" ) == 0 ) {
+      else if ( tmpstr == "PUT" ) {
 
-	// Read filename
-	tmp = strtok( NULL, " " );
-	path += ".";
-	path += tmp;
+	// Read filename 
+        pos = buffertemp.find(" ");
+        tmpstr = buffertemp.substr(0,pos);
+        path += ".";
+        path += tmpstr;
 
 	// Sanitize path name
 	path = path.substr(0, path.find("\r\n\r\n"));
@@ -187,17 +190,18 @@ int main( int argc, char *argv[] ) {
 	file.open( path.c_str(), std::ios::out );
 
 	// Extract file data from initial receive request
-	buffertemp = buffertemp.substr(buffertemp.find("\r\n\r\n")+4);
-	
-	// Write data to file
-	file.write(buffertemp.c_str(), buffertemp.size()); 
+
+	pos = buffertemp.find("\r\n\r\n")+4;
+
+	// Write initial data to file
+	file.write(&buffer[pos+4], bytes-(pos+4)); 
 
 	memset( buffer, 0, sizeof(buffer));
 	
 	// Receive any remaining data
-	while( client->Receive( (void *)buffer, sizeof(buffer)) ) {
+	while( (bytes = client->Receive( (void *)buffer, sizeof(buffer))) ) {
 
-	  file.write(buffer,strlen(buffer));
+	  file.write(buffer,bytes);
 	  memset( buffer, 0, sizeof(buffer));
 
 	}

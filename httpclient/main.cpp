@@ -76,10 +76,9 @@ int main( int argc, char *argv[] ) {
       return -1;
     }
 
+    // Construct path
     path += "./";
     path += argv[4];
-
-    std::cout << path << std::endl;
 
     // Open file
     file.open( path.c_str(), std::ios::in );
