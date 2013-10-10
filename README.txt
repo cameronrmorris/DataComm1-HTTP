@@ -1,4 +1,7 @@
-﻿Design: For this assignment I created a C++ class to encapsulate the workings of the TCP socket for ease of use and in mind that it would be able to be used in further assignments. 
+﻿Cameron Morris
+UMS01115162
+
+Design: For this assignment I created a C++ class to encapsulate the workings of the TCP socket for ease of use and in mind that it would be able to be used in further assignments. 
 
 
 I started with the HTTP client which can perform both GET and PUT requests to an HTTP server. It does this by first taking the command line arguments and parsing them to determine the appropriate action. If it was a GET request the client will connect to the given host and port and send the HTTP request and then read the response and print it to the screen. If it was a PUT request it will open the file and make sure it exists and then send the PUT request to the server with the file data. Overall, I was successful with this without any known issues. 
