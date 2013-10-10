@@ -1,0 +1,8 @@
+Listening on : 5560
+got connection from 127.0.0.1
+200 OK ./programming1.html (Client GET request)
+got connection from 127.0.0.1
+Creating file ./programming1.html (Client put Request)
+200 Ok File Created
+
+Shutting down... (SigINT/SigTerm shutdown)

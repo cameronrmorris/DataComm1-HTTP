@@ -1,0 +1,803 @@
+./http_client www.uml.edu 80 GET /sciences/computer-science/default.aspx
+
+HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+Server: Microsoft-IIS/7.0
+X-AspNet-Version: 4.0.30319
+MicrosoftOfficeWebServer: 5.0_Pub
+X-Powered-By: ASP.NET
+Date: Thu, 10 Oct 2013 21:23:07 GMT
+Connection: close
+Content-Length: 29549
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="apple-mobile-web-app-capable" content="no" /><meta name="apple-mobile-web-app-status-bar-style" content="black" /><meta name="HandheldFriendly" content="true" /><meta name="MobileOptimized" content="width" /><link rel="apple-touch-icon-precomposed" href="/system/includes/images/touch-icon-iphone-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/system/includes/images/touch-icon-iphone4-precomposed.png" /><title>
+	Computer Science
+</title><meta name="viewport" contøc>ºent="user-scalable=no, initial-scale=1,maximum-scale=1" />
+
+    <script type="text/javascript" src="/system/includes/js/uml.js?v=102"></script>
+
+    <link media="only screen and (max-device-width: 640px) and (max-device-height: 1136px)" type="text/css" rel="Stylesheet" href="/system/includes/css/base.css" /><link media="only screen and (min-device-width: 641px)" type="text/css" rel="Stylesheet" href="/system/includes/css/reset.css?v=105" /><link media="only screen and (min-device-width: 641px)" type="text/css" rel="Stylesheet" href="/system/includes/css/globalnav.css?v=105" /><link media="only screen and (min-device-width: 641px)" type="text/css" rel="Stylesheet" href="/system/includes/css/jquery-ui.css?v=105" />
+  
+    <!--[if lt IE 9]>
+    <link media="screen" type="text/css" rel="Stylesheet" href="/system/includes/css/reset.css?v=100" /><link media="screen" type="text/css" rel="Stylesheet" href="/system/includes/css/globalnav.css?v=100" /><link media="screen" type="text/css" rel="Stylesheet" href="/system/includes/css/jquery-ui.css?v=100" />
+    <![endif]-->
+
+
+    
+    <link media="only screen and (min-device-width: 641px)" type="text/css" rel="Stylesheet" href="/system/includes/css/template-shell.css?v=107" />
+
+    <!--[if lt IE 9]>
+    
+    <link media="screen" type="text/css" rel="Stylesheet" href="/system/includes/css/template-shell.css?v=107" />
+
+    <![endif]-->
+    
+    
+    <link media="only screen and (møc>ºin-device-width: 641px)" type="text/css" rel="Stylesheet" href="/system/includes/css/homepages.css" />
+    <link media="only screen and (min-device-width: 641px)" type="text/css" rel="Stylesheet" href="/system/includes/css/family1.css" />
+    <link media="only screen and (min-device-width: 641px)" type="text/css" rel="Stylesheet" href="/system/includes/css/genericDept.css" />
+    <link media="only screen and (min-device-width: 641px)" type="text/css" rel="Stylesheet" href="/system/includes/css/genericAcademicDept.css" />
+
+    <!--[if lte IE 9]>
+   <link media="screen" type="text/css" rel="Stylesheet" href="/system/includes/css/homepages.css" />
+    <link media="screen" type="text/css" rel="Stylesheet" href="/system/includes/css/family1.css" />
+    <link media="screen" type="text/css" rel="Stylesheet" href="/system/includes/css/genericDept.css" />
+    <link media="screen" type="text/css" rel="Stylesheet" href="/system/includes/css/genericAcademicDept.css" />
+
+    <![endif]-->
+
+
+<link media="only screen and (min-device-width: 641px)" type="text/css" rel="Stylesheet" href="/system/includes/css/dynamicnews.css?v=100" /><link media="only screen and (min-device-width: 641px)" type="text/css" rel="Stylesheet" href="/system/includes/css/footer.css?v=100" />
+    
+   
+     <!--[if lt IE 9]>
+    <link media="screen" type="text/css" rel="Stylesheet" href="/system/includes/css/dynamicnews.css?v=100" /><link media="screen" type="texøc>ºt/css" rel="Stylesheet" href="/system/includes/css/footer.css?v=100" />
+    <![endif]-->
+  
+     <link media="print" rel="stylesheet" type="text/css" href="/system/includes/css/print.css?v=100" />
+
+    <script type="text/javascript" src="/system/includes/js/webtrends.load.js"></script>
+
+<!--  
+    
+
+
+ -->
+         
+    </head>
+    <body class="genericAcademicDepartment">
+<div id="pageWrapper" >
+
+    
+   
+
+   
+
+
+
+<!-- GLOBAL NAV BEGIN -->
+<form id="globalSearch" name="globalSearch"  action="/search.aspx" onsubmit="return globalNavSearchSubmit()" onkeypress="globalNavSearchKeypress(event)">
+<div id="gn">
+<div id="gnTop">
+        <div class="content">
+
+
+
+<ul class="nav"><li><a href="/default.aspx"  title="" class="" ><span>Home</span></a></li><li><a href="/Directory/default.aspx"  title="" class="" ><span>Directory</span></a></li><li><a href="http://www.uml.edu/calendar/" title="" class=""><span>Calendar</span></a></li><li><a href="http://libweb.uml.edu/" title="" class=""><span>Libraries</span></a></li><li><a href="/About/office-services.aspx"  title="" class="" ><span>Offices/Services</span></a></li><li><a href="http://www.uml.edu/maps/" title="" class=""><span>Maps/Directions</span></a></li><li><a href="http://www.uml.edu/events/" title="" class=""><span>Plan an Event</span></a></li><li><a href="http://jobs.uml.edu/" title="" class=""><span>Jobs</span></a></li></ul>
+
+
+
+
+<a class="button" href="/" id=øc>º"mobileHomeButton"><span class="icon">&#8962;</span><span>Home</span></a><a class="button" href="/search.aspx" id="mobileSearchButton"><span class="icon">&#128269;</span><span>Search</span></a><a class="button" href="/student-Life/email.aspx"><span class="icon">&#9993;</span><span>Email</span></a><a class="button" href="http://www.uml.edu/enrollment/isis/default.aspx">iSiS Login</a>
+
+        </div>
+    </div>
+    <div id="gnBottom">
+        <div class="content">
+            <a href="/" class="logo"><span class="logoText">UMass Lowell</span></a>
+            <div class="logo" id="menuButton"><div class="logoButton"><span>Menu</span><div class="shadow"></div><div class="inner"></div></div></div>
+
+
+
+
+
+<ul class="nav"><li><a href="/Admissions-Aid/default.aspx"  title="" class="" ><span>Prospective Students </span></a></li><li><a href="/Student-Life/default.aspx"  title="" class="" ><span>Current Students </span></a></li><li><a href="/Faculty-Staff/default.aspx"  title="" class="" ><span>Faculty/Staff </span></a></li><li><a href="http://www.uml.edu/alumni/" title="" class=""><span>Alumni/Friends </span></a></li><li><a href="http://www.uml.edu/community/" title="" class=""><span>Community</span></a></li><li><a href="/Pressroom/default.aspx"  title="" class="" ><span>Media</span></a></li><li><a href="http://alumni.uml.edu/s/1355/lowell/index.aspx?sid=1355&amp;gid=4&amp;pgid=336" title="" class=""><span>Support UML</span></a></li></øc>ºul>
+
+
+             <div id="gnSearchBoxContainer" class="">
+                <div class="searchLabel">
+                   <input type="text" id="gnSearch" placeholder="Search"/><span class="icon" id="gnSearchButton">&#128269;</span>
+                    <div class="searchSelector">
+                        <label for="gnSearch"><fieldset class="switch">
+                            <legend>Search Type</legend>      
+                            <input id="website" name="view" type="radio" class="active"><label for="website">Website</label><input id="people" name="view" type="radio"><label for="people">People</label>
+                            
+                            <span class="switch-button"></span>
+                        </fieldset></label>
+                    </div>
+                  
+
+                </div>  
+             </div>
+</div>
+    </div>
+
+</div>
+</form>
+<div style="display:none;"><form id="peopleSearch" name="peopleSearch" method="post" action="/directory/people.aspx"><iøc>ºnput type="hidden" name="q" value=""></form></div>
+<div style="display:none;"><form id="webSearch" name="webSearch" method="get" action="/search.aspx"><input type="hidden" name="q" value=""></form></div>
+<!-- GLOBAL NAV END --> 
+
+<form method="post" action="default.aspx" id="theForm" enctype="multipart/form-data">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODU2MTYzMzIwD2QWAmYPZBYCZg9kFgJmD2QWAgIJD2QWAgIBD2QWAgIBD2QWBAIFD2QWAgIHDw8WAh4HVmlzaWJsZWhkZAIJD2QWBAIBD2QWBGYPZBYIAgEPEGRkFgFmZAIDDxBkZBYBZmQCBQ8QZGQWAWZkAgcPEGRkFgBkAgEPZBYCAgEPEGRkFgFmZAIDD2QWBGYPZBYIAgEPEGQPFhYCAQICAgMCBAIFAgYCBwIIAgkCCgILAgwCDQIOAg8CEAIRAhICEwIUAhUCFhYWEAUIQWNhZGVtaWMFCEFjYWRlbWljZxAFCkFkbWlzc2lvbnMFCkFkbWlzc2lvbnNnEAUGQWx1bW5pBQZBbHVtbmlnEAUMQXJ0cyAmIE11c2ljBQxBcnRzICYgTXVzaWNnEAUJQXRobGV0aWNzBQlBdGhsZXRpY3NnEAUGQ2FtcHVzBQZDYW1wdXNnEAUUQ29tbXVuaXR5ICYgT3V0cmVhY2gFFENvbW11bml0eSAmIE91dHJlYWNoZxAFB0N1bHR1cmUFB0N1bHR1cmVnEAUJRWR1Y2F0aW9uBQlFZHVjYXRpb25nEAULRW5naW5lZXJpbmcFC0VuZ2luZWVyaW5nZxAFD0ZhY3VsdHkgJiBTdGFmZgUPRmFjdWx0eSAmIFN0YWZmZxAFE0Z1bmRyYWlzaW5nICYgR2lmdHMFE0Z1bmRyYWlzaW5nICYgR2lmdHNnEAUUSGVhbHRoICYgRW52aXJvbm1lbnQFFEhlYWx0aCAmIEVudmlyb25tZW50ZxAFCkh1bWFuaXRpZXMFCkh1bWFuaXRpZXNnEAUNSW50ZXJuYXRpb25hbAUNSW50ZXJuYXRpb25hbGcQBQpNYW5hZ2VtZW50BQpNYW5hZ2VtZW50ZxAFCFJlc2VhcmNoBQhSZXNlYXJjaGcQBQhTY2llbmNlcwUIU2NpZW5jZXNnEAUPU29jaWFsIFNjaWVuY2VzBQ9Tb2NpYWwgU2NpZW5jZXNnEAUMU3R1ZGVudCBMaWZlBQxTdHVkZW50IExpZmVnEAUITmV3c2xpbmUFCE5ld3NsaW5lZxAFFUV4cGVyaWVudGlhbCBMZWFybmluZwUVRXhwZXJpZW50aWFsIExlYXJuaW5nZxYBZmQCAw8QZA8WBQIBAgICAwIEAgUWBRAFBWVOZXdzBQVlTmV3c2cQBQtJbiBUaGUgTmV3cwULSW4gVGhlIE5ld3NnEAUNUHJlc3MgUmVsZWFzZQUNUHJlc3MgUmVsZWFzZWcQBQpOZXdzbGV0dGVyBQpOZXdzbGV0dGVyZxAFD0RlcGFydG1lbnQgTmV3cwUPRGVwYXJ0bWVudCBOZXdzZxYBZmQCBQ8QZGQWAWZkAgcPEGQPFgxmAgECAgIDAgQCBQIGAgcCCAIJAgoCCxYMEAUEMjAwMgUEMjAwMmcQBQQyMDAzBQQyMDAzZxAFBDIwMDQFBDIwMDRnEAUEMjAwNQUEMjAwNWcQBQQyMDA2BQQøc>ºyMDA2ZxAFBDIwMDcFBDIwMDdnEAUEMjAwOAUEMjAwOGcQBQQyMDA5BQQyMDA5ZxAFBDIwMTAFBDIwMTBnEAUEMjAxMQUEMjAxMWcQBQQyMDEyBQQyMDEyZxAFBDIwMTMFBDIwMTNnFgECC2QCAQ9kFgICAQ8QZGQWAWZkZFILQQFdsSTpx2tT3vS0zTDfIrknsEkQvRJS9gR9C4+R" />
+
+<div id="mainContainer">
+    
+    
+    <div id="watermark"></div>
+    <div id="topNavWrapper"><div id="topNav"> <div class="container"> <ul class="root"> <li class="level1 about">
+                <a href="/About/default.aspx">ABOUT</a>
+            <ul><li>
+                <a href="/About/default.aspx">About UMass Lowell</a>
+            </li><li>
+                <a href="/Chancellor/Welcome.aspx">Chancellor's Welcome</a>
+            </li><li>
+                <a href="/About/quick-facts.aspx">Quick Facts</a>
+            </li><li>
+                <a href="/About/leadership/campus-leadership.aspx">Campus Leadership</a>
+            </li><li>
+                <a href="/About/mission.aspx">Mission</a>
+            </li><li>
+                <a href="/2020/default.aspx">Strategic Plan</a>
+øc>º            </li><li>
+                <a href="/About/about-lowell/default.aspx">About Lowell</a>
+            </li><li>
+                <a href="/admissions/visit/default.aspx">Visit Campus</a>
+            </li></ul></li><li class="level1 academics">
+                <a href="/Academics/default.aspx">ACADEMICS</a>
+            <ul><li>
+                <a href="/Academics/Explore.aspx">Explore Programs</a>
+            </li><li>
+                <a href="/Registrar/Calendars/default.aspx">Academic Calendar</a>
+            </li><li>
+                <a href="/Academics/Provost-Office/default.aspx">Provost Office</a>
+            </li><li>
+                <a href="/Academics/undergraduate-programs/default.aspx">Undergraduate Majors</a>
+            </li><li>
+                <a href="/Academics/Graduate-programs/default.aspx">Graduate Programs</a>
+            </li><li>
+                <a href="http://continuinged.uml.edu/">Online Learning</a>
+            </li><li>
+                <a href="/Registrar/default.aspx">Registrar's Office</a>
+            </li><li>
+                <a href="/Academics/colleges.aspx">Colleges &amp; Schools</a>
+            </li><li>
+                <a href="/Experiential-Learning/default.aspx">Co-op Program</a>
+            </li><li>
+                <a href="/Honors/default.aspx">Commonwealth Honors</a>
+            </li><li>
+                <a href="/CLASS/default.aspx">Tutoring/Advising</a>
+            </li><li>
+                <a href="http://www.uml.edu/catalog/">Catalog</a>
+            </li></ul></li><li class="level1 research">
+                <a href="/Research/default.aspx">RESEARCH</a>
+            <ul><li>
+                <a href="/Research/About/vice-provost-office.aspx">Vice Provost for Research</a>
+            </li><li>
+                <a href="/Research/Centers/default.aspx">Research Centers &amp;  Labs</a>øc>º
+            </li><li>
+                <a href="/Research/business/default.aspx">Connections for Business</a>
+            </li><li>
+                <a href="/Research/CRF/default.aspx">Core Research Laboratories &amp; Services (CRF)</a>
+            </li><li>
+                <a href="/Research/cvip/Companies-Partners/nvi.aspx">New Ventures &amp;  Commercialization</a>
+            </li><li>
+                <a href="/Research/Faculty-Research/connections.aspx">Connections for Faculty</a>
+            </li><li>
+                <a href="/Research/OIC/default.aspx">Policies, Guidelines and Compliance</a>
+            </li><li>
+                <a href="/Research/Student-Opportunities/default.aspx">Student Research Opportunities</a>
+            </li><li>
+                <a href="/Research/publications/ingenuity-magazine.aspx">Ingenuity News</a>
+            </li></ul></li><li class="level1 admissions">
+                <a href="/Admissions-Aid/default.aspx">ADMISSIONS &amp; AID</a>
+            <ul><li>
+                <a href="/admissions/default.aspx">Undergraduate</a>
+            </li><li>
+                <a href="/Grad/default.aspx">Graduate</a>
+            </li><li>
+                <a href="http://continuinged.uml.edu/">Continuing Education</a>
+            </li><li>
+                <a href="/admissions/information-for/transfers/default.aspx">Transfer Students</a>
+            </li><li>
+                <a href="/Internatøc>ºional-applicants/default.aspx">International Applicants</a>
+            </li><li>
+                <a href="/FinancialAid/default.aspx">Financial Aid</a>
+            </li><li>
+                <a href="/FinancialAid/scholarships/default.aspx">Scholarships/Fellowships</a>
+            </li><li>
+                <a href="/Tuition-fees/Tuition-Costs/default.aspx">Tuition &amp; Fees</a>
+            </li><li>
+                <a href="#">Research &amp; Teaching Assistantships</a>
+            </li></ul></li><li class="level1 studentlife">
+                <a href="/Student-Life/default.aspx">STUDENT LIFE</a>
+            <ul><li>
+                <a href="http://www.uml.edu/calendar/">Events Calendar</a>
+            </li><li>
+                <a href="http://www.uml.edu/student-services/reslife">Housing</a>
+            </li><li>
+                <a href="http://www.campusdish.com/en-us/CSNE/UMassLowell">Dining Services</a>
+            </li><li>
+                <a href="/student-services/Disability/default.aøc>ºspx">Disability Services</a>
+            </li><li>
+                <a href="/About/facilities.aspx">Facilities on Campus</a>
+            </li><li>
+                <a href="http://www.uml.edu/student-services/student_activities/default.html">Student Clubs &amp; Activities</a>
+            </li><li>
+                <a href="/student-services/default.aspx">Student Affairs</a>
+            </li><li>
+                <a href="#">Forms for Students</a>
+            </li><li>
+                <a href="/About/about-lowell/default.aspx">Life Outside Campus</a>
+            </li></ul></li><li class="level1 athletics">
+                <a href="/Athletics-Recreation/default.aspx">ATHLETICS &amp; RECREATION</a>
+            <ul><li>
+                <a href="/CampusRecreation/default.aspx">Campus Recreation Center</a>
+            </li><li>
+                <a href="http://www.goriverhawks.com/">River Hawk Athletics</a>
+            </li><li>
+                <a href="http://goriverhawks.com/sports/2012/3/29/MICE_03øc>º29125955.aspx">Tickets</a>
+            </li><li>
+                <a href="/CampusRecreation/Intramurals/default.aspx">Intramural Sports</a>
+            </li><li>
+                <a href="/CampusRecreation/Fitness-Wellness/default.aspx">Fitness Classes</a>
+            </li><li>
+                <a href="/CampusRecreation/About-Us/Facilities.aspx">Facilities</a>
+            </li></ul></li></ul> </div></div> </div>
+   <div id="mainBody">
+        <div id="leftColumn-shadow"></div>
+        <div id="leftColumn">
+	<div id="leftNav">
+	        <div id="leftNav-row">
+		<div id="leftNav-left"></div>
+		<div id="leftNav-content">
+                                        
+    
+<h2><a href="/Sciences/computer-science/default.aspx">Computer Science</a></h2>                    
+<ul><li><a href="/Sciences/computer-science/greetings-from-the-chair.aspx" >Greetings from the Chair</a></li><li><a href="/Sciences/computer-science/Programs/default.aspx" >Programs</a></li><li><a href='http://teaching.cs.uml.edu/~heineøc>ºs/courses/CoursesThisSemester.jsp'>Courses This Semester</a></li><li><a href="/Sciences/computer-science/Prospective-Students/Prospective-Transfer-Students.aspx" >Prospective/Transfer Students</a></li><li><a href="/Sciences/computer-science/faculty/default.aspx" >Faculty</a></li><li><a href="/Sciences/computer-science/Colloquia-and-Technical-Reports/Colloquia-and-Research-Papers.aspx" >Colloquia & Research Papers</a></li><li><a href="/Sciences/computer-science/Research/default.aspx" >Research</a></li><li><a href="/Sciences/computer-science/CS-Infrastructure/Computing-Facilities.aspx" >Facilities</a></li><li><a href="/Sciences/computer-science/MSDN/MSDN-Alliance.aspx" >Microsoft Developer Network Program Info</a></li><li><a href="/Sciences/computer-science/Faq/default.aspx" >FAQ</a></li><li><a href="/Sciences/computer-science/Student-Groups.aspx" >Student Groups</a></li><li><a href="/Sciences/computer-science/alumni/default.aspx" >Alumni</a></li><li><a href="/Sciences/computer-science/CS-IAB-Faculty.aspx" >Industrial Advisory Board</a></li><li><a href="/Sciences/computer-science/CS-Newsletters.aspx" >Department News </a></li><li><a href="/Sciences/computer-science/Contact-Us.aspx" >Contact Us</a></li></ul>
+
+
+		</div>
+		<div id="leftNav-right"></div>
+	        </div>            
+	    øc>º    <div id="leftNav-bottom"></div>
+	</div>                    
+	<div id="leftColumn-content">
+                        
+    
+            <div id="seeAlso"><h2>See Also</h2><ul><li><a href="/admissions/information-for/default.aspx"  title="" class="" ><span>First-year Experience</span></a></li><li><a href="/Registrar/default.aspx"  title="" class="" ><span>Registrarâ€™s Office </span></a></li><li><a href="/student-services/Career-Services/default.aspx"  title="" class="" ><span>Career Services</span></a></li></ul></div>    
+    
+
+	</div>
+        </div>
+        <div id="contentBody">
+                <div id="contentBody-center">
+                                <div id="contentBody-center-top">
+                                	<div id="topContent">
+                                                                
+            <img class="featurePhoto" src="/Images/comp-science-landing2_tcm18-75031.png" />
+            <h1 id="pageTitle">Computer Science</h1>
+            
+<div id="breadCrumbs">
+<a href='/'>Home</a>&nbsp;&gt;&nbsp;<a href="/Sciences/default.aspx" >College of Sciences</a>&nbsp;&gt;&nbsp;<a href="/Sciences/computer-science/default.aspx" >Computer Science</a>
+</div>
+
+                
+                                    
+            <div class="content">               
+
+        <p>The Department of Computer Science offers programs leading to bachelor's, master's and doctoral degrees that blend applied and øc>ºtheoretical aspects of computation, including a program in bioinformatics.
+<br />
+						<a href="/Sciences/computer-science/greetings-from-the-chair.aspx"  title="Greeting_Chair" >Find Out More&gt;</a></p>
+      
+            </div>
+                        
+                                	</div>
+                                </div>
+                                <div id="contentBody-center-bottom">
+                                                
+<div class="wrapper">
+    <div class="featureColumn featureColumn-left">
+    
+        <h2>The UMass Lowell Edge</h2>
+<div class="buttonsContainer">
+<img src="/system/includes/images/arrow_left.png" class="prev" />
+<img src="/system/includes/images/arrow_right.png" class="next" />
+</div>
+<div id="carousellist">
+
+  
+<div class="content alumniSpotligt mediaFeature" style="display:none" xmlns:tridion="http://www.tridion.com/ContentManager/5.0"><img src="/Images/Andrew-Ambrosino-Env_tcm18-107456.jpg" alt="Andrew Ambrosino" width="254"><div class="mask"></div>
+  <div class="textBubble">
+    <div class="topBorder">&nbsp;</div>
+    <div class="bodyBG">
+      <div class="contentBG">
+        <p>We tell students they can get a great deal here and be part of an excellent community.&nbsp;<a href="/Profiles/Andrew-Ambrosino.aspx">more&nbsp;&gt;      
+
+     </a><br><strong>Andrew&nbsp;Ambrosino</strong>, '15</p>
+      </div>
+    </div>
+    <div class="bottomBorder">&nbsp;</diøc>ºv>
+  </div>
+</div><div class="content alumniSpotligt mediaFeature" style="display:none" xmlns:tridion="http://www.tridion.com/ContentManager/5.0"><img src="/Images/Jie-Wang_environmental_tcm18-49710.jpg" alt="Jie Wang" width="254"><div class="mask"></div>
+  <div class="textBubble">
+    <div class="topBorder">&nbsp;</div>
+    <div class="bodyBG">
+      <div class="contentBG">
+        <p>This is an interesting and exciting time at the University and I consider myself lucky to be part of it.&nbsp;<a href="/Profiles/Jie-Wang.aspx">more&nbsp;&gt;      
+
+     </a><br><strong>Jie&nbsp;Wang</strong></p>
+      </div>
+    </div>
+    <div class="bottomBorder">&nbsp;</div>
+  </div>
+</div><div class="content alumniSpotligt mediaFeature" style="display:none" xmlns:tridion="http://www.tridion.com/ContentManager/5.0"><img src="/Images/Mike-Lunderville-Env_tcm18-105420.jpg" alt="Mike Lunderville" width="254"><div class="mask"></div>
+  <div class="textBubble">
+    <div class="topBorder">&nbsp;</div>
+    <div class="bodyBG">
+      <div class="contentBG">
+        <p>Robotics is self-directed learning, because there are no known answers.&nbsp;<a href="/Profiles/Mike-Lunderville.aspx">more&nbsp;&gt;      
+
+     </a><br><strong>Mike&nbsp;Lunderville</strong>, '13</p>
+      </div>
+    </div>
+    <div class="bottomBorder">&nbsp;</div>
+  </div>
+</div><div class="content alumniSpotligt mediaFeature" style="display:none" xmlns:tridion="htøc>ºtp://www.tridion.com/ContentManager/5.0"><img src="/Images/micire-mark_tcm18-19950.jpg" alt="Mark Micire" width="254"><div class="mask"></div>
+  <div class="textBubble">
+    <div class="topBorder">&nbsp;</div>
+    <div class="bodyBG">
+      <div class="contentBG">
+        <p>The people in Prof. Yanco's lab come out as better scientists and better people&nbsp;<a href="/Profiles/Mark-Micire.aspx">more&nbsp;&gt;      
+
+     </a><br><strong>Mark &nbsp;Micire</strong>, â€™11</p>
+      </div>
+    </div>
+    <div class="bottomBorder">&nbsp;</div>
+  </div>
+</div><div class="content alumniSpotligt mediaFeature" style="display:none" xmlns:tridion="http://www.tridion.com/ContentManager/5.0"><img src="/Images/adam-norton-enviro_tcm18-49136.jpg" alt="Adam Norton" width="254"><div class="mask"></div>
+  <div class="textBubble">
+    <div class="topBorder">&nbsp;</div>
+    <div class="bodyBG">
+      <div class="contentBG">
+        <p>I may not know a person, but if I find out theyâ€™re from UMass Lowell, we automatically have a connection.&nbsp;<a href="/Profiles/Adam-Norton.aspx">more&nbsp;&gt;      
+
+     </a><br><strong>Adam&nbsp;Norton</strong>, â€™10</p>
+      </div>
+    </div>
+    <div class="bottomBorder">&nbsp;</div>
+  </div>
+</div><div class="content alumniSpotligt mediaFeature" style="display:none" xmlns:tridion="http://www.tridion.com/ContentManager/5.0"><img src="/Images/Xinwen-Fu-profile_tcm18-45433.jpg" alt="Xinwen øc>ºFu" width="254"><div class="mask"></div>
+  <div class="textBubble">
+    <div class="topBorder">&nbsp;</div>
+    <div class="bodyBG">
+      <div class="contentBG">
+        <p>The University enjoys a reputation for technological innovation and entrepreneurship.&nbsp;<a href="/Profiles/Xinwen-Fu.aspx">more&nbsp;&gt;      
+
+     </a><br><strong>Xinwen&nbsp;Fu</strong></p>
+      </div>
+    </div>
+    <div class="bottomBorder">&nbsp;</div>
+  </div>
+</div>
+
+
+</div>    
+    </div>
+                
+    <div class="featureColumn featureColumn-right">
+    
+        <a href="/news/archive.aspx?colleges=&departments=Computer Science&newstypes=eNews|In The News|Newsletter|Press Release&maintopics="><h2>News</h2></a>
+<div class="content">
+<div class="news">
+
+  
+<div class="item"><a href="/News/stories/2013/Co-op-Scholars.aspx"><div class="photoBorder"><img src="/Images/thumbCo-op-scholar-2013_tcm18-117001.jpg" alt="&#xD;&#xA;          Computer science sophomore and summer co-op scholar Stephen Demeule, left, with Vice Provost for Research Julie Chen.&#xD;&#xA;        "></div>
+    <p>Co-op Scholars Get Real-World Experience</p></a></div><div class="item"><a href="/News/stories/2013/Students-DoD-hackathon.aspx"><div class="photoBorder"><img src="/Images/thumbUML-hackathon-winners-resized_tcm18-110957.jpg" alt="&#xD;&#xA;						From left, students Jeremy Poulin, Nick Ver Voort, Michael Stowell and Justin Mayhew receive a check forøc>º $3,000 for their winning nutrition-training Android app. Photo by Alexandra Foran&#xD;&#xA;					"></div>
+    <p>Students Win Top Prize in DoD â€˜Hackathonâ€™</p></a></div><div class="item"><a href="/News/stories/2013/Teachers-app-workshop.aspx"><div class="photoBorder"><img src="/Images/thumbTeachers-workshop-resized_tcm18-110037.jpg" alt="&#xD;&#xA;						Twenty undergraduate educators from across the county participated in a workshop hosted by UMass Lowellâ€™s Computer Science Department on developing apps for mobile devices and how to incorporate the technology into their coursework. Speaking to the attendees, at right, is Assoc. Prof. Fred Martin.&#xD;&#xA;						"></div>
+    <p>Teachers Learn How to Create Mobile Apps</p></a></div>
+
+
+</div>
+
+<a class="more" href="/news/archive.aspx?colleges=&departments=Computer Science&newstypes=eNews|In The News|Newsletter|Press Release&maintopics=">More News</a>
+
+</div>                          
+                </div>
+
+    <div class="featureColumn featureCøc>ºolumn-farRight">
+    
+    <h2>Resources</h2><div class="content">
+        <ul>
+						<li><a href="http://blog.uml.edu/cs/" title="Dept. pf Computer Science Blog">Department News Blog</a></li>
+						<li><a href="http://www.cs.uml.edu/colloquia/" title="Computer Science Colloquia" target="_blank">Computer Science Colloquia</a></li>
+						<li><a href="/Sciences/computer-science/CS-Newsletters.aspx"  title="CS Newsletters" >Department Newsletter</a></li>
+						<li><a href="/Sciences/computer-science/Programs/Ugrad/default.aspx"  title="Undergraduate Program" >Undergraduate Program</a></li>
+						<li><a href="/Sciences/computer-science/Programs/Grad/default.aspx"  title="Graduate Program" >Graduate Program</a></li>
+						<li><a href="http://teaching.cs.uml.edu/~heines/courses/2012-13-fall-courses.jsp" title="Course Schedules">Course Schedules</a></li>
+						<li><a href="/Robotics/default.aspx"  title="Robotics at UMass Lowell" >Robotics at UMass Lowell</a></li>
+						<li><a href="/Sciences/Bio-Cheminforøc>ºmatics/default.aspx"  title="Bio-Cheminformatics at UMass Lowell" >Bio-Cheminformatics at UMass Lowell</a></li>
+					</ul>
+      </div>    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="socialIcons"><a href="/Social-Media/RSS.aspx"  title="" class="" ><span><img alt="RSS" src="/Images/rss_tcm18-20793.png" /></span></a><a href="http://www.facebook.com/UMLowell" title="" class="" target="_blank"><span><img alt="facebook" src="/Images/facebook_tcm18-20794.png" /></span></a><a href=" http://www.youtube.com/umasslowell" title="" class="" target="_blank"><span><img alt="Youtube" src="/Images/youtube_tcm18-20791.png" /></span></a><a href="http://twitter.com/#!/umasslowell" title="" class="" target="_blank"><span><img alt="twitter" src="/Images/twitter_tcm18-20790.png" /></span></a><a href="http://www.linkedin.com/groups?gid=88968" title="" class="" target="_blank"><span><img alt="linkedin" src="/Images/linkedin_tcm18-20792.png" /></span></a><br /></diøc>ºv>    
+    
+</div>
+
+                                </div>
+                </div>                
+        </div>
+        <div id="contentSidebar"><div class="wrapper"></div></div>
+        <div id="contentBody-shadow"></div>
+   </div> 
+   <div id="mainBody-bottom"></div>
+
+
+   
+    <div id="footer">
+        
+    
+
+
+        <strong>Department of Computer Science</strong> - Olsen Hall, 198 Riverside St., Lowell, MA 01854
+<br />
+Phone: (978) 934-3620 Fax: (978) 934-3551 <a href="mailto:dept@cs.uml.edu" target="_blank">Contact us</a>
+<!--SITE_EDIT_INIT-->
+
+
+
+    </div>
+<div id="newsdisplay" style="display:none;">
+<div id="container"></div>
+</div>
+<div id="newsloader" style="display:none;">
+<img src="/system/includes/images/uml_logo_stacked.jpg" alt="Loading" />
+</div>
+</div>         
+</form>
+</div>
+<div class='backToTop' id='backToTop'>&#59231</div>
+</body>
+</html>
+
+./http_client localhost 5560 GET programming1.html
+
+HTTP/1.0 200 OK
+
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Benyuan Liu">
+  <meta name="GENERATOR"
+ content="Mozilla/4.72 [en] (X11; U; Linux 2.2.14-12 i686) [Netscape]">
+  <title>Datacom I: Programming Assignment 1</title>
+</head>
+<body link="#0000ef" alink="#ff0000" bgcolor="#ffffff" text="#000000"
+ vlink="#51188e">
+<center>
+<h2>Programming Assignment 1: Programming with Sockets</h2>
+</center>
+In this assignment you will be asked to implement an HTTP client and
+server
+running a pared down version of HTTP/1.0. You will have to extend the
+client
+and server to make use of some of the application level headers we have
+studied in class. For those of you who already have socket programming
+experience, the basic part of this assignment will be fairly easy. I am
+therefore adding an extra credit component for those students who want
+a more challenging assignment. This project can be completed iøsÏ—‹n either
+C/C++ or Java.
+<br>
+&nbsp;
+<h3>What to Turn In</h3>
+When you hand in your programming assignment, you should include:
+<ul>
+  <li>
+A program listing containing in-line documentation. Uncommented code
+will
+be heavily penalized.</li>
+  <li>
+A separate (typed) document of a page or so describing the overall
+program
+design, a verbal description of ``how it works'', and design tradeoffs
+considered and made. Also describe possible improvements and extensions
+to your program (and sketch how they might be made).</li>
+  <li>
+A separate description of the test cases you ran on your program to
+convince
+yourself (and me) that it is indeed correct, and execution traces
+showing
+these test being run.&nbsp; Also describe any&nbsp; cases for which
+your
+program is known not to work correctly.&nbsp; The test cases&nbsp; you
+should hand are described below.</li>
+</ul>
+<!---------------------
+<ul>
+<li>
+You may not borrow code written by a fellow student in this class. That would be cheating.</li>
+
+<li>
+You must acknowledgøsÏ—‹e the source of any borrowed code. This means providing
+a reference to a book or URL where the code appears.</li>
+
+<li>
+In your design document, you must identify which portions of your code
+were borrowed and which were written by yourself. This means explaining
+any modifications and extension you made to the code you borrowed. You
+should also use comments in your source code to distinguish borrowed code
+from code you wrote yourself.</li>
+
+<li>
+You should only use code that is freely available in the public domain.
+Samples from text books are fine, for example. Proprietary code that belongs
+to your employer is not fine unless your employer has explicitly released
+the code into the public domain.</li>
+</ul>
+------------------------>
+<h3>The HTTP Client</h3>
+Your client should take command line arguments specifying a server name
+or IP address, the port on which to contact the server, the method you
+use, and the path of the requested object on the server. You are going
+to implement
+two methods of HTTP: <tt> GET øsÏ—‹</tt> and <tt> PUT </tt>.
+<ul>
+  <li> <tt> GET</tt> <br>
+The format of the command line is
+    <blockquote><tt>myclient host port_number GET filename </tt></blockquote>
+    <p>The basic client action should proceed as follows:
+    </p>
+    <ol>
+      <li>
+Connect to the server via a connection-orieted socket.</li>
+      <li>
+Submit a valid HTTP/1.0 GET request for the supplied URL.
+        <p>GET /index.html HTTP/1.0 <br>
+        <br>
+(end with extra CR/LF) <br>
+        </p>
+      </li>
+      <li>Read (from the socket) the server's response and display it
+as program output.</li>
+    </ol>
+Once you have this part of the client working, you should demonstrate
+it with the following
+two test cases:
+    <ol>
+      <li>
+Use it to get a file of your choosing from a "real" web server on the
+internet. For example,
+        <blockquote><tt>myclient www.cnn.com 80 GET index.html </tt></blockquote>
+      </li>
+      <li>
+Use it to get a file from your own server program. For example, your
+server is running on pc1.cs.uml.eøsÏ—‹du, port number 5678.
+        <blockquote><tt>myclient pc1.cs.uml.edu 5678 GET index.html </tt></blockquote>
+This command would result in an HTTP GET request to pc1.cs.uml.edu for
+index.html on port 5678, and get the file index.html back to the
+client.
+      </li>
+    </ol>
+  </li>
+  <li><tt> PUT </tt>
+    <p>The format of the command line is
+    </p>
+    <blockquote><tt>myclient host port_number PUT filename </tt></blockquote>
+    <p>The basic client action should proceed as follows:
+    </p>
+    <ol>
+      <li>
+Connect to the server via a connection-orieted socket.</li>
+      <li>
+Submit a PUT request for the supplied file:
+        <p>PUT filename <br>
+extra CR/LF.
+        </p>
+        <p>(Once your server program receives such a request, it should
+expect to receive the file and save it to disk.)
+        </p>
+      </li>
+      <li>Send the file to the server.</li>
+      <li>
+Wait for server's reply. </li>
+    </ol>
+Once you have this part of the client working, you should test it with
+your own server: send øsÏ—‹out a file to your server, the server should save
+the file and sends back a reponse.
+    <ol>
+    </ol>
+  </li>
+</ul>
+<h3>
+The HTTP Server</h3>
+Your server should take command line arguments specifying a port
+number. For example,
+<blockquote><tt>myserver 5678 </tt></blockquote>
+The basic server action should proceed as follows
+<ol>
+  <li>
+Initialize the server.</li>
+  <li>
+Wait for a client connection on the port number specified by command
+line
+argument.</li>
+  <li>
+When a client connection is accepted, read the HTTP request. </li>
+  <li>
+Construct a valid HTTP response including status line, any headers you
+feel are appropriate, and, of course, the requested file in the
+response
+body.
+    <p> For <tt> GET </tt>, if the server receives the "GET
+index.html HTTP/1.0" request, it sends out "200 OK" to the client,
+followed by the file index.html. If the requested file doesn't exist,
+the server sends out "404 Not Found" response to the client.
+    </p>
+    <p> For <tt> PUT </tt>, if the server receives the "PUT tøsÏ—‹est.txt"
+request, it will save the file as test.txt. If the received file from
+client is successfully created, the server sends back a "200 OK File
+Created" response to the client. </p>
+  </li>
+  <li>Close the client connection and loop back to wait for the next
+client connection to arrive.</li>
+</ol>
+Notice that your server will be structured around an infinite loop.
+That
+means that you must interrupt your server with a termination signal to
+stop it. Make sure your server code shuts down gracefully when
+terminated.
+That means closing any open sockets, freeing allocated memory, etc.
+<p>Once you get your server working, demonstrate it with the following
+two test cases:
+<br>
+First, use an ordinary browser such as Netscape or Internet Explorer
+to get a html file from your server. For example, your server is
+running at
+host pc1.cs.uml.edu on port number 5678, and there is a file index.html
+in the current directory. In the URL box of the web browser, type in
+pc1.cs.uml.edu:5678/index.html, the browser should fetchøsÏ—‹ the file and
+display it.
+<br>
+Second, use your own client to get a file.
+<br>
+Third, use your own client to put a file.
+</p>
+<h3><b>Programming the assignment in JAVA</b></h3>
+<ul>
+  <li>
+Recall from our discussions in class that Java encapsulates the concept
+of a client-side connection-oriented (TCP) socket with the class, <i>Socket</i>.&nbsp;
+Details about the socket class can be found at <a
+ href="http://java.sun.com/products/jdk/1.1/docs/api/java.net.Socket.html">http://java.sun.com/products/jdk/1.1/docs/api/java.net.Socket.html</a></li>
+  <li>
+Java encapsulates the concept of a server-side connection-oriented
+socket
+with the class, <i>ServerSocket</i>.&nbsp; Details about this class
+can
+be found at&nbsp;<a
+ href="http://java.sun.com/products/jdk/1.1/docs/api/java.net.ServerSocket.html">
+http://java.sun.com/products/jdk/1.1/docs/api/java.net.ServerSocket.html.
+    </a>You'll
+need to use the <i>accept() </i>and <i>close(0)</i> methods of this
+class,
+which are also document at this URL.</li>
+  <li>
+If you'øsÏ—‹re interested in a quick Java tutorial targeted specifically at
+socket programming, check out "Socket Programming in Java: a tutorial,"
+by Q. Mahmoud,&nbsp; Javaworld, Dec. 1996, <a
+ href="http://www.javaworld.com/javaworld/jw-12-1996/jw-12-sockets_p.html">http://www.javaworld.com/javaworld/jw-12-1996/jw-12-sockets_p.html</a>.
+Sun's socket tutorial is at <a
+ href="http://java.sun.com/docs/books/tutorial/networking/sockets/index.html">http://java.sun.com/docs/books/tutorial/networking/sockets/index.html.&nbsp;</a></li>
+</ul>
+<h3>
+<b>Programming the assignment in C</b></h3>
+<p><br>
+If you choose to write your programs in C, you'll need to master
+the C system calls needed for socket programming.&nbsp; These include <i>socket(),
+bind(), listen(), accept(), connect(), </i>and<i> close()</i>. You are
+welcome to do this assignment using the WINSOCK API, rather than
+the Unix API, if you have a Windows machine and a C compiler.
+<br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+<h3><b>Programming notes</b></h3>
+<p><br>
+Here are a few tips/øsÏ—‹thoughts to help you with the assignment:
+</p>
+<ul>
+  <li>
+You must chose a server port number great that 1023 (to be safe, choose
+a server port number larger than 5000).</li>
+  <li>
+I would strongly suggest that everyone begin by writing a client and
+getting
+its test cases to work. Then write a sequential server and test it
+with your client. Finally, write a concurrent server, if you want to do
+the extra credit portion of the assignment.</li>
+  <li>
+In writing your code, make sure to check for an error return from your
+system calls or method invocations, and display an appropriate message.
+In Java, this means using <i>IOException()</i>; in C this means
+checking
+and handling error return codes from your system calls. See the
+documentation
+noted above.</li>
+  <li>
+Most of you will be running both the client and server on the same
+machine
+(e.g., by starting up the server and running it in the background, and
+then starting the client) under Unix. Recall the use of
+the ampersand to start a process in the backgrouøsÏ—‹nd. If you need to kill
+your server after you have started it, you can use the UNIX <i>kill
+    </i>command. Use the UNIX <i>ps </i>command to find the process
+id of your server</li>
+  <li>
+Make sure you close every socket that you use in your program. If you
+abort
+your program, the socket may still hang around and the next time you
+try
+and bind a new socket to the port ID you previously used (but never
+closed),
+you may get an error. Also, please be aware that port ID's,
+when bound to sockets, are system-wide values and thus other students
+may
+be using the port number you are trying to use. On UNIX systems,
+you can run the command "netstat" to see which port numbers are
+currently
+assigned.</li>
+</ul>
+<h3>
+Extra Credit: Concurrent Server [+ 10%]</h3>
+Rewrite your server to be a concurrent server - that is a server that
+waits
+on the welcoming socket and then creates a new thread or process to
+handle
+the incoming request. If you are doing the assignment in C, you'll need
+to learn about the fork() system call.
+IføsÏ—‹ you're doing the assignment in Java, see the section "Supporting
+Multiple
+Clients" in Sun's socket programming tutorial,
+<br>
+<a
+ href="http://java.sun.com/docs/books/tutorial/networking/sockets/clientServer.html">http://java.sun.com/docs/books/tutorial/networking/sockets/clientServer.html.</a>
+<br>
+&nbsp;
+</body>
+</html>
+
+./http_client localhost 5560 PUT programming1.html
+
+Content length: 11589
+HTTP/1.0 200 Ok File Created
+
